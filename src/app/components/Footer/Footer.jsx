@@ -28,10 +28,10 @@ function Footer() {
         <div className="flex flex-col justify-center gap-3 text-white">
           <h3 className="pb-2 text-lg md:text-xl">Legal</h3>
           <ul className="flex flex-col gap-2">
-            <li className="text-[#9CA3AF]">
-              <Link href={"#"}>Privacy Policy</Link>
+            <li className="text-[#9CA3AF] hover:text-primary">
+              <Link href={"/privacy"}>Privacy Policy</Link>
             </li>
-            <li className="text-[#9CA3AF]">
+            <li className="text-[#9CA3AF] hover:text-primary">
               <Link href={"#"}>Terms and Services</Link>
             </li>
           </ul>
@@ -55,7 +55,7 @@ function Footer() {
           © 2025 HelpMeSpeak, Inc. All rights reserved.
         </p>
         <div className="flex flex-row gap-8 mt-6 md:mt-8 lg:mt-11">
-          <a target="_blank">
+          <a href="#" target="_blank">
             <Image
               src={"/icons/facebook.jpg"}
               height={60}
@@ -64,7 +64,7 @@ function Footer() {
               className="h-[34px] md:h-[34px] lg:h-10 w-[34px] md:w-[34px] lg:w-10 object-cover"
             />
           </a>
-          <a target="_blank">
+          <a href="#" target="_blank">
             <Image
               src={"/icons/instagram.jpg"}
               height={60}
@@ -73,7 +73,7 @@ function Footer() {
               className="h-[34px] md:h-[34px] lg:h-10 w-[34px] md:w-[34px] lg:w-10 object-cover"
             />
           </a>
-          <a target="_blank">
+          <a href="#" target="_blank">
             <Image
               src={"/icons/tiktok.jpg"}
               height={60}
