@@ -90,7 +90,7 @@ function Navbar() {
         className="grid grid-cols-2 lg:grid-cols-3 items-center py-4 max-w-[1440px] mx-auto w-11/12"
       >
         <div className="flex items-center justify-start">
-          <Link href={"#home"}>
+          <Link href={"/"}>
             <div className="flex flex-col items-center justify-center gap-2">
               <Image
                 src="/icons/logo.png"

@@ -10,7 +10,7 @@ function Footer() {
       <div className="max-w-[1440px] w-11/12 mx-auto flex flex-col md:flex-row items-start md:items-center md:justify-between gap-8 lg:gap-12">
         {/* Logo + Description */}
         <div className="">
-          <Link href={"#home"}>
+          <Link href={"/"}>
             <div className="flex flex-col items-center justify-center gap-2">
               <Image
                 src="/icons/logo.png"
@@ -25,24 +25,24 @@ function Footer() {
             </div>
           </Link>
         </div>
-        <div className="flex flex-col justify-center gap-3 text-white">
-          <h3 className="pb-2 text-lg md:text-xl">Legal</h3>
-          <ul className="flex flex-col gap-2">
-            <li className="text-[#9CA3AF] hover:text-primary">
+        <div className="flex flex-col justify-center items-center gap-3 text-white">
+          <h3 className="pb-2 text-xl md:text-2xl">Legal</h3>
+          <ul className="flex flex-row gap-6">
+            <li className="text-[#c5c6c7] hover:text-primary">
               <Link href={"/privacy"}>Privacy Policy</Link>
             </li>
-            <li className="text-[#9CA3AF] hover:text-primary">
+            <li className="text-[#c5c6c7] hover:text-primary">
               <Link href={"#"}>Terms and Services</Link>
             </li>
           </ul>
         </div>
 
-        <div className="flex flex-col">
-          <p className="text-[#9CA3AF] text-sm md:text-base">
-            Contact E-mail: h@helpmespeak.app
+        <div className="flex flex-col gap-2">
+          <p className="text-[#c5c6c7] text-sm md:text-base">
+            Contact E-mail: <span>  </span> h@helpmespeak.app
           </p>
-          <p className="text-[#9CA3AF] text-sm md:text-base">
-            Support E-mail: support@helpmespeak.app
+          <p className="text-[#c5c6c7] text-sm md:text-base">
+            Support E-mail: <span>  </span> support@helpmespeak.app
           </p>
         </div>
       </div>
