@@ -35,7 +35,7 @@ function PricingSection() {
           <ul className="font-poppins space-y-3 px-4">
             <li className="flex flex-row gap-3 items-center">
               <span className="">
-                <FaCheck className="text-black bg-white p-1 rounded-full text-xl" />
+                <FaCheck className="text-black/50 bg-white p-1 rounded-full text-xl" />
               </span>{" "}
               <span className="text-sm md:text-base tracking-wider">
                 1 Language Pair
@@ -43,7 +43,7 @@ function PricingSection() {
             </li>
             <li className="flex flex-row gap-3 items-center">
               <span className="">
-                <FaCheck className="text-black bg-white p-1 rounded-full text-xl" />
+                <FaCheck className="text-black/50 bg-white p-1 rounded-full text-xl" />
               </span>{" "}
               <span className="text-sm md:text-base tracking-wider">
                 Basic Phrases
@@ -51,7 +51,7 @@ function PricingSection() {
             </li>
             <li className="flex flex-row gap-3 items-center">
               <span className="">
-                <FaCheck className="text-black bg-white p-1 rounded-full text-xl" />
+                <FaCheck className="text-black/50 bg-white p-1 rounded-full text-xl" />
               </span>{" "}
               <span className="text-sm md:text-base tracking-wider">
                 No Offline Packs
@@ -79,7 +79,7 @@ function PricingSection() {
           <ul className="font-poppins space-y-3 px-4">
             <li className="flex flex-row gap-3 items-center">
               <span className="">
-                <FaCheck className="text-black bg-white p-1 rounded-full text-xl" />
+                <FaCheck className="text-black/50 bg-white p-1 rounded-full text-xl" />
               </span>{" "}
               <span className="text-sm md:text-base tracking-wider">
                 Unlimited Language Pairs
@@ -87,7 +87,7 @@ function PricingSection() {
             </li>
             <li className="flex flex-row gap-3 items-center">
               <span className="">
-                <FaCheck className="text-black bg-white p-1 rounded-full text-xl" />
+                <FaCheck className="text-black/50 bg-white p-1 rounded-full text-xl" />
               </span>{" "}
               <span className="text-sm md:text-base tracking-wider">
                 All Phrase Library
@@ -95,7 +95,7 @@ function PricingSection() {
             </li>
             <li className="flex flex-row gap-3 items-center">
               <span className="">
-                <FaCheck className="text-black bg-white p-1 rounded-full text-xl" />
+                <FaCheck className="text-black/50 bg-white p-1 rounded-full text-xl" />
               </span>{" "}
               <span className="text-sm md:text-base tracking-wider">
                 Offline Packs
@@ -123,7 +123,7 @@ function PricingSection() {
           <ul className="font-poppins space-y-3 px-4">
             <li className="flex flex-row gap-3 items-center">
               <span className="">
-                <FaCheck className="text-black bg-white p-1 rounded-full text-xl" />
+                <FaCheck className="text-black/50 bg-white p-1 rounded-full text-xl" />
               </span>{" "}
               <span className="text-sm md:text-base tracking-wider">
                 Same As Monthly
@@ -131,7 +131,7 @@ function PricingSection() {
             </li>
             <li className="flex flex-row gap-3 items-center">
               <span className="">
-                <FaCheck className="text-black bg-white p-1 rounded-full text-xl" />
+                <FaCheck className="text-black/50 bg-white p-1 rounded-full text-xl" />
               </span>{" "}
               <span className="text-sm md:text-base tracking-wider">
                 ≈37–38% Cheaper Vs Monthly
@@ -139,7 +139,7 @@ function PricingSection() {
             </li>
             <li className="flex flex-row gap-3 items-center">
               <span className="">
-                <FaCheck className="text-black bg-white p-1 rounded-full text-xl" />
+                <FaCheck className="text-black/50 bg-white p-1 rounded-full text-xl" />
               </span>{" "}
               <span className="text-sm md:text-base tracking-wider">
                 Optional 7-Days Trial
