@@ -35,7 +35,7 @@ function AppDetails() {
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}
-            className="h-[400px] lg:h-[780px] w-auto relative lg:ml-20 mx-auto lg:mx-0"
+            className="h-[400px] lg:h-[880px] w-auto relative lg:ml-20 mx-auto lg:mx-0"
           ></div>
         </div>
         <div className="space-y-6">
@@ -53,7 +53,7 @@ function AppDetails() {
 
           <div className="space-y-4">
             <div className="flex flex-row items-center gap-4">
-              <SquareCheckBig />
+              <SquareCheckBig className="text-primary" />
               <p className="font-roboto text-lg lg:text-2xl text-dark">
                 Accuracy First
               </p>
@@ -63,7 +63,7 @@ function AppDetails() {
             </p>
 
             <div className="flex flex-row items-center gap-4">
-              <ChartNetwork />
+              <ChartNetwork className="text-primary" />
               <p className="font-roboto text-lg lg:text-2xl text-dark">
                 Continious Innovation
               </p>
