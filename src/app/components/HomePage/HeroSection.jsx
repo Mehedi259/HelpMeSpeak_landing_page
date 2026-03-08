@@ -30,7 +30,7 @@ function HeroSection() {
             <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-3">
               <div>
                 <div className="flex items-center gap-2">
-                  <a href="">
+                  <a href="https://play.google.com/store/apps/details?id=com.nureldin.helpmespeak" target="_blank" rel="noopener noreferrer">
                     <Image
                       src={"/icons/playstore.png"}
                       width={500}
@@ -39,7 +39,7 @@ function HeroSection() {
                       className="w-[100px] h-8 lg:w-[120px] lg:h-10"
                     />
                   </a>
-                  <a href="">
+                  <a href="https://apps.apple.com/us/app/helpmespeak-language-helper/id6758175527" target="_blank" rel="noopener noreferrer">
                     <Image
                       src={"/icons/applestore.png"}
                       width={500}

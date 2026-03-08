@@ -117,12 +117,18 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link
-                href={"#about"}
-                className={`block py-2 hover:text-primary transition `}
+              <a
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("about")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+                className="block py-2 hover:text-primary transition"
               >
                 About Us
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -219,12 +225,18 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link
-                href={"#about"}
-                className={`block py-2 hover:text-primary transition `}
+              <a
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("about")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+                className="block py-2 hover:text-primary transition"
               >
                 About Us
-              </Link>
+              </a>
             </li>
           </ul>
 

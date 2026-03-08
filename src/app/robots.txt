@@ -1,0 +1,25 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home | My Website",
+  description: "This is my website description for Google indexing.",
+  keywords: ["next.js", "seo", "google indexing"],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Home | My Website",
+    description: "SEO optimized Next.js site",
+    url: "https://example.com",
+    siteName: "My Website",
+    images: [
+      {
+        url: "https://example.com/og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+};
