@@ -5,15 +5,13 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { toast } from "react-toastify";
+import DownloadModal from "../DownloadModal";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const sidebarRef = useRef(null);
-
-  const [email, setEmail] = useState("");
-  const [loadingEmail, setLoadingEmail] = useState(false);
 
   // Close dropdown/sidebar when clicking outside
   useEffect(() => {
@@ -30,58 +28,6 @@ function Navbar() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [menuOpen]);
-
-  // Email send handler (unchanged)
-  const handleSendEmail = async () => {
-    if (!email) {
-      toast.error("Please Enter your email!", {
-        pauseOnHover: true,
-        progress: undefined,
-        style: { backgroundColor: "#E6E6FA", color: "#00000069" },
-        hideProgressBar: true,
-      });
-      return;
-    }
-
-    setLoadingEmail(true);
-
-    try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        body: JSON.stringify({ type: "download", email }),
-        headers: { "Content-Type": "application/json" },
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        toast.success(data.message, {
-          pauseOnHover: true,
-          progress: undefined,
-          style: { backgroundColor: "#E6E6FA", color: "#00000069" },
-          hideProgressBar: true,
-        });
-        setEmail("");
-      } else {
-        toast.error(data.error || "Failed to send email", {
-          pauseOnHover: true,
-          progress: undefined,
-          style: { backgroundColor: "#E6E6FA", color: "#00000069" },
-          hideProgressBar: true,
-        });
-      }
-    } catch (err) {
-      console.error("Send email error:", err);
-      toast.error("Something went wrong!", {
-        pauseOnHover: true,
-        progress: undefined,
-        style: { backgroundColor: "#E6E6FA", color: "#00000069" },
-        hideProgressBar: true,
-      });
-    } finally {
-      setLoadingEmail(false);
-    }
-  };
 
   return (
     <div className="bg-gradient-to-b from-[#0a0e27] to-[#0f1535]">
@@ -133,36 +79,17 @@ function Navbar() {
           </ul>
         </div>
 
-        {/* COL 3: Right Side (Download & User Auth) */}
+        {/* COL 3: Right Side (Download Button) */}
         <div className="flex items-center justify-end gap-2">
-          {/* Download Input Section (Desktop only) */}
+          {/* Download Button (Desktop only) */}
           <div className="hidden lg:flex items-center gap-2">
-            <div className="relative">
-              <Image
-                src={"/icons/mail.png"}
-                height={14}
-                width={14}
-                alt="Email icon"
-                className="absolute left-4 top-1/2 -translate-y-1/2"
-              />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your mail..."
-                className="py-[9px] px-4 pl-[35px] placeholder:text-sm focus:ring-2 focus:ring-primary focus:outline-none rounded-xl bg-white/10 text-white placeholder:text-gray-400 font-normal w-52"
-              />
-            </div>
             <button
-              disabled={loadingEmail}
-              onClick={handleSendEmail}
-              className="py-[9px] px-5 rounded-xl bg-primary cursor-pointer text-white border border-primary hover:bg-primary/90 duration-300 disabled:opacity-50"
+              onClick={() => setIsModalOpen(true)}
+              className="py-[9px] px-5 rounded-xl bg-primary cursor-pointer text-white border border-primary hover:bg-primary/90 duration-300"
             >
-              {loadingEmail ? "Sending..." : "Get Download Link"}
+              Get Download Link
             </button>
           </div>
-
-          <div className="hidden lg:block"></div>
 
           <div className="flex items-center lg:hidden gap-3">
             <button
@@ -197,11 +124,11 @@ function Navbar() {
           <div className="flex justify-between items-center mb-10 border-b border-gray-300 pb-4">
             <Link href={"/"} onClick={() => setMenuOpen(false)}>
               <Image
-                src={"/icons/logo 4.png"}
-                height={74}
-                width={122}
-                className="w-[100px] h-auto"
-                alt="Task mama logo"
+                src={"/icons/logo.png"}
+                height={50}
+                width={50}
+                className="w-[40px] h-auto"
+                alt="HelpMeSpeak logo"
               />
             </Link>
             <button
@@ -229,6 +156,7 @@ function Navbar() {
                 href="#about"
                 onClick={(e) => {
                   e.preventDefault();
+                  setMenuOpen(false);
                   document.getElementById("about")?.scrollIntoView({
                     behavior: "smooth",
                   });
@@ -240,37 +168,23 @@ function Navbar() {
             </li>
           </ul>
 
-          {/* Download Input Section (Mobile) */}
+          {/* Download Button (Mobile) */}
           <div className="mt-8 pt-4 border-t border-gray-200">
-            <h4 className="text-md font-bold mb-3 text-gray-800">
-              Get the App Link
-            </h4>
-            <div className="relative mb-3">
-              <Image
-                src={"/icons/mail.png"}
-                height={14}
-                width={14}
-                alt="Email icon"
-                className="absolute left-4 top-1/2 -translate-y-1/2"
-              />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your mail..."
-                className="w-full py-3 px-8 pl-[35px] placeholder:text-sm focus:ring-2 focus:ring-primary focus:outline-none rounded-xl bg-secondary text-sm font-normal"
-              />
-            </div>
             <button
-              disabled={loadingEmail}
-              onClick={handleSendEmail}
-              className="w-full py-3 px-4 rounded-xl bg-primary text-white text-sm border border-primary hover:bg-primary/90 duration-300 disabled:opacity-50"
+              onClick={() => {
+                setIsModalOpen(true);
+                setMenuOpen(false);
+              }}
+              className="w-full py-3 px-4 rounded-xl bg-primary text-white text-sm border border-primary hover:bg-primary/90 duration-300"
             >
-              {loadingEmail ? "Sending..." : "Get Download Link"}
+              Get Download Link
             </button>
           </div>
         </div>
       </div>
+
+      {/* Download Modal */}
+      <DownloadModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

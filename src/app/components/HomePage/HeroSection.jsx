@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import DownloadModal from "../DownloadModal";
 
 function HeroSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen flex items-center relative overflow-hidden">
       {/* Blue glow effects */}
@@ -47,9 +50,10 @@ function HeroSection() {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setIsModalOpen(true)}
               className="py-4 px-8 cursor-pointer rounded-lg bg-primary text-white hover:bg-primary/90 duration-300 font-semibold text-lg"
             >
-              Start Free Trial
+              Get Download Link
             </motion.button>
             
             <div className="flex items-center gap-3">
@@ -126,6 +130,9 @@ function HeroSection() {
           </div>
         </motion.div>
       </div>
+
+      {/* Download Modal */}
+      <DownloadModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
