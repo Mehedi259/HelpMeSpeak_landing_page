@@ -5,39 +5,43 @@ import AppDetails from "./components/HomePage/AppDetails";
 import AppMode from "./components/HomePage/AppMode";
 import HeroSection from "./components/HomePage/HeroSection";
 import PricingSection from "./components/HomePage/PricingSection";
-import SliderSection from "./components/HomePage/Sldier/SliderSection";
 
 export default function Home() {
   return (
     <div className="font-roboto overflow-x-hidden">
-      <section className="relative ">
-        <section className="bg-linear-to-b from-[#8FD4F0]/0 via-[#8FD4F0]/30 to-[#8FD4F0]/10 blur-lg absolute top-0 left-0 w-full h-full -z-10"></section>
-        <div className="absolute -z-20 opacity-50 top-1/6 -translate-y-1/6 md:top-1/5 md:-translate-y-1/5 lg:top-1/4 lg:-translate-y-1/4 -right-[100px] lg:-right-[280px] rotate-28">
-          <Image
-            src={"/images/dots.png"}
-            width={400}
-            height={400}
-            alt="Star icon"
-            className="w-44 h-44 lg:w-auto lg:h-[480px]"
-          />
+      {/* Hero Section with Dark Background */}
+      <section className="relative bg-gradient-to-b from-[#0a0e27] via-[#0f1535] to-[#1a1f3a]">
+        {/* Starry background effect */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-[10%] left-[5%] w-1 h-1 bg-white rounded-full"></div>
+          <div className="absolute top-[20%] right-[15%] w-1 h-1 bg-white rounded-full"></div>
+          <div className="absolute top-[40%] left-[20%] w-1 h-1 bg-white rounded-full"></div>
+          <div className="absolute top-[60%] right-[25%] w-1 h-1 bg-white rounded-full"></div>
+          <div className="absolute top-[80%] left-[40%] w-1 h-1 bg-white rounded-full"></div>
+          <div className="absolute top-[15%] right-[45%] w-0.5 h-0.5 bg-white rounded-full"></div>
+          <div className="absolute top-[35%] left-[60%] w-0.5 h-0.5 bg-white rounded-full"></div>
+          <div className="absolute top-[70%] right-[10%] w-0.5 h-0.5 bg-white rounded-full"></div>
         </div>
-        <div className="absolute -z-20 opacity-50 top-1/6 -translate-y-1/6 md:top-1/5 md:-translate-y-1/5 lg:top-1/4 lg:-translate-y-1/4 -left-[100px] lg:-left-[280px] -rotate-28">
-          <Image
-            src={"/images/dots.png"}
-            width={400}
-            height={400}
-            alt="Star icon"
-            className="w-44 h-44 lg:w-auto lg:h-[480px]"
-          />
-        </div>
-        <div className="max-w-[1440px] mx-auto w-11/12 ">
+        
+        <div className="max-w-[1440px] mx-auto w-11/12">
           <HeroSection />
         </div>
       </section>
 
-      <AppMode />
+      {/* App Features Section */}
+      <section className="bg-gradient-to-b from-[#1a1f3a] to-[#0f1535] text-white">
+        <div className="max-w-[1440px] mx-auto w-11/12 py-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
+            App Features
+          </h2>
+          <p className="text-center text-gray-300 mb-12 text-lg">
+            Full aste sway way to converaátions or chat with
+          </p>
+          <AppMode />
+        </div>
+      </section>
+
       <PricingSection />
-      <SliderSection />
       <AppDetails />
     </div>
   );

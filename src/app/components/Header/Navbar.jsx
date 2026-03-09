@@ -84,22 +84,22 @@ function Navbar() {
   };
 
   return (
-    <div>
+    <div className="bg-gradient-to-b from-[#0a0e27] to-[#0f1535]">
       <nav
         id="home"
         className="grid grid-cols-2 lg:grid-cols-3 items-center py-4 max-w-[1440px] mx-auto w-11/12"
       >
         <div className="flex items-center justify-start">
           <Link href={"/"}>
-            <div className="flex flex-col items-center justify-center gap-2">
+            <div className="flex items-center gap-3">
               <Image
                 src="/icons/logo.png"
-                height={500}
-                width={500}
+                height={50}
+                width={50}
                 alt="Logo image"
-                className="w-[50px] md:w-[70px] h-auto"
+                className="w-[40px] md:w-[50px] h-auto"
               />
-              <h1 className="text-dark text-xs sm:text-sm md:text-lg font-bold font-poppins">
+              <h1 className="text-white text-sm md:text-lg font-bold font-poppins">
                 HelpMeSpeak
               </h1>
             </div>
@@ -111,7 +111,7 @@ function Navbar() {
             <li>
               <Link
                 href={"/"}
-                className={`hover:text-primary transition duration-300`}
+                className={`text-white hover:text-primary transition duration-300`}
               >
                 Home
               </Link>
@@ -125,7 +125,7 @@ function Navbar() {
                     behavior: "smooth",
                   });
                 }}
-                className="block py-2 hover:text-primary transition"
+                className="block py-2 text-white hover:text-primary transition"
               >
                 About Us
               </a>
@@ -150,7 +150,7 @@ function Navbar() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your mail..."
-                className="py-[9px] px-4 pl-[35px] placeholder:text-sm focus:ring-2 focus:ring-primary focus:outline-none rounded-xl bg-secondary font-normal w-52"
+                className="py-[9px] px-4 pl-[35px] placeholder:text-sm focus:ring-2 focus:ring-primary focus:outline-none rounded-xl bg-white/10 text-white placeholder:text-gray-400 font-normal w-52"
               />
             </div>
             <button

@@ -2,77 +2,126 @@
 
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 function AppMode() {
-  return (
-    <div className="relative ">
-      <div className="absolute w-full h-full bg-linear-to-br from-[#8FD4F0]/10 via-[#8FD4F0]/20 to-[#8FD4F0]/1 blur-2xl -z-10"></div>
-      <div className="max-w-[1440px] mx-auto w-11/12 py-12 lg:py-20 relative">
-        {/* star icon */}
-        <div className="absolute top-12 -z-10 -left-[331px] opacity-50 rotate-45">
-          <Image
-            src={"/images/dots.png"}
-            width={400}
-            height={400}
-            alt="Star icon"
-            className="w-44 h-44 lg:w-auto lg:h-[250px]"
-          />
-        </div>
-        <div className="absolute -bottom-6 -right-[351px] -z-10 opacity-50 rotate-45">
-          <Image
-            src={"/images/dots.png"}
-            width={400}
-            height={400}
-            alt="Star icon"
-            className="w-44 h-44 lg:w-auto lg:h-[302px]"
-          />
-        </div>
-        <div className="text-center py-12 space-y-6">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold font-lato leading-normal text-dark">
-            App Features
-          </h1>
-        </div>
-        <br />
-        <br />
+  const features = [
+    {
+      image: "/images/practiceUntilYouFeelReady_section_image.png",
+      title: "Practice Until You Feel Ready",
+      description: "Build confidence with real-time AI conversation training.",
+      layout: "left"
+    },
+    {
+      image: "/images/speakInstantly_section_image.png",
+      title: "Speak Instantly in Any Situation",
+      description: "Translate voice and text in seconds — no hesitation.",
+      layout: "right",
+      badge: "Laniers Alphacostar"
+    },
+    {
+      image: "/images/travelWithoutLanguage_section_image.png",
+      title: "Travel Without Language Stress",
+      description: "Access categorized phrases for airports, restaurants, emergencies, and more.",
+      layout: "left"
+    }
+  ];
 
-        <div className="flex flex-wrap justify-center lg:justify-between gap-16 items-center">
-          <div className="flex flex-col gap-12 items-center justify-center max-w-[280px] lg:max-w-[350px] h-auto">
-            <Image
-              src={"/images/aiChatBot.png"}
-              height={1200}
-              width={1500}
-              alt="Mama Mode Screenshot"
-              className="rounded-3xl bg-center bg-cover "
-            />
-            <p className="text-dark text-center">
-              You Can Practice Realtime Conversation Through HelpMeSpeak AI Chat
-            </p>
-          </div>
-          <div className="flex flex-col gap-12 items-center justify-center max-w-[280px] lg:max-w-[350px] h-auto">
-            <Image
-              src={"/images/InstantDictionary.png"}
-              height={1200}
-              width={1500}
-              alt="Mama Mode Screenshot"
-              className="rounded-3xl bg-center bg-cover "
-            />
-            <p className="text-dark text-center">
-              Instant Translator Can Translate Real-Time Voice or Text Perfect
-              for Quick Conversations, Travel Or Learning
-            </p>
-          </div>
-          <div className="flex flex-col gap-12 items-center justify-center max-w-[280px] lg:max-w-[350px] h-auto">
-            <Image
-              src={"/images/phreaseBox.png"}
-              height={1200}
-              width={1500}
-              alt="Mama Mode Screenshot"
-              className="rounded-3xl bg-center bg-cover "
-            />
-            <p className="text-dark text-center">
-              Learn & Get Useful Phrase for Categorized Everyday Conversation
-            </p>
-          </div>
+  return (
+    <div className="relative py-16 lg:py-24 bg-[#0a0f1e]">
+      <div className="max-w-[1440px] mx-auto w-11/12">
+        {/* Feature Sections */}
+        <div className="space-y-8 lg:space-y-12">
+          {features.map((feature, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, delay: index * 0.2 }}
+              className={`bg-gradient-to-br from-[#1a2847]/50 to-[#0f1535]/50 rounded-3xl p-8 lg:p-12 border border-blue-500/20 backdrop-blur-sm ${
+                feature.layout === "right" ? "bg-[#0d1425]" : ""
+              }`}
+            >
+              <div className={`flex flex-col ${
+                feature.layout === "right" ? "lg:flex-row-reverse" : "lg:flex-row"
+              } items-center gap-8 lg:gap-12`}>
+                {/* Text Content */}
+                <motion.div 
+                  initial={{ opacity: 0, x: feature.layout === "right" ? 50 : -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="flex-1 text-center lg:text-left"
+                >
+                  <motion.h3 
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ 
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="text-white text-2xl lg:text-3xl font-bold mb-4"
+                  >
+                    {feature.title}
+                  </motion.h3>
+                  <motion.p 
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ 
+                      duration: 3.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.2
+                    }}
+                    className="text-gray-300 text-base lg:text-lg leading-relaxed"
+                  >
+                    {feature.description}
+                  </motion.p>
+                  {feature.badge && (
+                    <motion.div 
+                      animate={{ y: [0, -6, 0] }}
+                      transition={{ 
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: 0.4
+                      }}
+                      className="mt-6 inline-flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-4 py-2"
+                    >
+                      <span className="text-blue-400 text-sm">🏠 {feature.badge}</span>
+                    </motion.div>
+                  )}
+                </motion.div>
+
+                {/* Image */}
+                <motion.div 
+                  initial={{ opacity: 0, x: feature.layout === "right" ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="flex-1 relative"
+                >
+                  <motion.div 
+                    animate={{ y: [0, -15, 0] }}
+                    transition={{ 
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="relative w-full max-w-[500px] mx-auto"
+                  >
+                    <Image
+                      src={feature.image}
+                      height={600}
+                      width={500}
+                      alt={feature.title}
+                      className="w-full h-auto"
+                    />
+                  </motion.div>
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>

@@ -51,7 +51,7 @@ export default function TestimonialSlider() {
   return (
     <section className="py-12">
       <div className="pb-14">
-        <h1 className="font-lato font-bold text-2xl md:text-4xl lg:text-[54px] text-center lg:py-6">
+        <h1 className="font-lato font-bold text-2xl md:text-4xl lg:text-[54px] text-center lg:py-6 text-white">
           Reviews / <span className="text-primary"> testimonials</span>
         </h1>
       </div>
