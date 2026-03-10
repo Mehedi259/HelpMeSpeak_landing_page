@@ -120,7 +120,7 @@ function AppDetails() {
               <div className="flex flex-row items-center gap-4">
                 <ChartNetwork className="text-primary" />
                 <p className="font-roboto text-lg lg:text-2xl text-white">
-                  Continious Innovation
+                  Continuous Innovation
                 </p>
               </div>
               <p className="font-roboto lg:text-lg text-white">
