@@ -5,6 +5,7 @@ import AppDetails from "./components/HomePage/AppDetails";
 import AppMode from "./components/HomePage/AppMode";
 import HeroSection from "./components/HomePage/HeroSection";
 import PricingSection from "./components/HomePage/PricingSection";
+import TargetAudience from "./components/HomePage/TargetAudience";
 
 export default function Home() {
   return (
@@ -30,16 +31,11 @@ export default function Home() {
 
       {/* App Features Section */}
       <section className="bg-gradient-to-b from-[#1a1f3a] to-[#0f1535] text-white">
-        <div className="max-w-[1440px] mx-auto w-11/12 py-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
-            App Features
-          </h2>
-          <p className="text-center text-gray-300 mb-12 text-lg">
-            Full aste sway way to converaátions or chat with
-          </p>
-          <AppMode />
-        </div>
+        <AppMode />
       </section>
+
+      {/* Target Audience Section */}
+      <TargetAudience />
 
       <PricingSection />
       <AppDetails />

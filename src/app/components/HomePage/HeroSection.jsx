@@ -53,7 +53,7 @@ function HeroSection() {
               onClick={() => setIsModalOpen(true)}
               className="py-4 px-8 cursor-pointer rounded-lg bg-primary text-white hover:bg-primary/90 duration-300 font-semibold text-lg"
             >
-              Get Download Link
+              Download the App
             </motion.button>
             
             <div className="flex items-center gap-3">

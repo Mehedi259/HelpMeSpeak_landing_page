@@ -16,8 +16,7 @@ function AppMode() {
       image: "/images/speakInstantly_section_image.png",
       title: "Speak Instantly in Any Situation",
       description: "Translate voice and text in seconds — no hesitation.",
-      layout: "right",
-      badge: "Laniers Alphacostar"
+      layout: "right"
     },
     {
       image: "/images/travelWithoutLanguage_section_image.png",
@@ -30,6 +29,39 @@ function AppMode() {
   return (
     <div className="relative py-16 lg:py-24 bg-[#0a0f1e]">
       <div className="max-w-[1440px] mx-auto w-11/12">
+        {/* Section Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <motion.h2 
+            animate={{ y: [0, -8, 0] }}
+            transition={{ 
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="text-white text-4xl lg:text-5xl font-bold mb-4"
+          >
+            App Features
+          </motion.h2>
+          <motion.p 
+            animate={{ y: [0, -5, 0] }}
+            transition={{ 
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.2
+            }}
+            className="text-gray-400 text-lg"
+          >
+            The fastest way to translate and practice real conversations with AI.
+          </motion.p>
+        </motion.div>
+
         {/* Feature Sections */}
         <div className="space-y-8 lg:space-y-12">
           {features.map((feature, index) => (

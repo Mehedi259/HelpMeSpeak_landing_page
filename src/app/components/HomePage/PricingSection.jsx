@@ -50,7 +50,7 @@ function PricingSection() {
           }}
           className="text-2xl md:text-4xl lg:text-5xl font-bold font-lato leading-normal text-white"
         >
-          Choose The Right Plan For You
+          Choose the Right Plan for You
         </motion.h1>
         <motion.p 
           animate={{ y: [0, -6, 0] }}
