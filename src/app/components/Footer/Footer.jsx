@@ -55,31 +55,31 @@ function Footer() {
           © 2025 HelpMeSpeak, Inc. All rights reserved.
         </p>
         <div className="flex flex-row gap-8 mt-6 md:mt-8 lg:mt-11">
-          <a href="#" target="_blank">
+          <a href="https://facebook.com/helpmespeakapp" target="_blank" rel="noopener noreferrer">
             <Image
               src={"/icons/facebook.jpg"}
               height={60}
               width={60}
-              alt="Social icon"
-              className="h-[34px] md:h-[34px] lg:h-10 w-[34px] md:w-[34px] lg:w-10 object-cover"
+              alt="Facebook"
+              className="h-[34px] md:h-[34px] lg:h-10 w-[34px] md:w-[34px] lg:w-10 object-cover hover:opacity-80 transition-opacity"
             />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://instagram.com/helpmespeakapp" target="_blank" rel="noopener noreferrer">
             <Image
               src={"/icons/instagram.jpg"}
               height={60}
               width={60}
-              alt="Social icon"
-              className="h-[34px] md:h-[34px] lg:h-10 w-[34px] md:w-[34px] lg:w-10 object-cover"
+              alt="Instagram"
+              className="h-[34px] md:h-[34px] lg:h-10 w-[34px] md:w-[34px] lg:w-10 object-cover hover:opacity-80 transition-opacity"
             />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://tiktok.com/@helpmespeakapp" target="_blank" rel="noopener noreferrer">
             <Image
               src={"/icons/tiktok.jpg"}
               height={60}
               width={60}
-              alt="Social icon"
-              className="h-[34px] md:h-[34px] lg:h-10 w-[34px] md:w-[34px] lg:w-10 object-cover"
+              alt="TikTok"
+              className="h-[34px] md:h-[34px] lg:h-10 w-[34px] md:w-[34px] lg:w-10 object-cover hover:opacity-80 transition-opacity"
             />
           </a>
         </div>
