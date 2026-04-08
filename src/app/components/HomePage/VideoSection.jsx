@@ -77,6 +77,10 @@ function VideoSection() {
               ref={videoRef}
               className="w-full h-auto"
               controls
+              autoPlay
+              muted
+              loop
+              playsInline
               poster="/images/appImage.png"
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
