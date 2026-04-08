@@ -6,6 +6,7 @@ import AppMode from "./components/HomePage/AppMode";
 import HeroSection from "./components/HomePage/HeroSection";
 import PricingSection from "./components/HomePage/PricingSection";
 import TargetAudience from "./components/HomePage/TargetAudience";
+import VideoSection from "./components/HomePage/VideoSection";
 
 export default function Home() {
   return (
@@ -28,6 +29,9 @@ export default function Home() {
           <HeroSection />
         </div>
       </section>
+
+      {/* Video Section */}
+      <VideoSection />
 
       {/* App Features Section */}
       <section className="bg-gradient-to-b from-[#1a1f3a] to-[#0f1535] text-white">
