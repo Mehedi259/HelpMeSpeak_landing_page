@@ -73,7 +73,7 @@ function HeroSection() {
               </motion.a>
               <motion.a 
                 whileHover={{ scale: 1.05 }}
-                href="https://apps.apple.com/us/app/helpmespeak-language-helper/id6758175527" 
+                href="https://apps.apple.com/us/app/helpmespeak-ai-translator/id6758175527" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

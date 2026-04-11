@@ -17,7 +17,7 @@ export default function DownloadModal({ isOpen, onClose }) {
     },
     {
       name: "Apple App Store",
-      url: "https://apps.apple.com/us/app/helpmespeak-language-helper/id6758175527",
+      url: "https://apps.apple.com/us/app/helpmespeak-ai-translator/id6758175527",
       icon: "/icons/applestore.png",
       color: "from-blue-500 to-blue-600"
     }
