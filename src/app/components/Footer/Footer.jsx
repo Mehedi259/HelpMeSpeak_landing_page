@@ -13,7 +13,7 @@ function Footer() {
           <Link href={"/"}>
             <div className="flex flex-col items-center justify-center gap-2">
               <Image
-                src="/icons/logo.png"
+                src="/logos/logo.png"
                 height={500}
                 width={500}
                 alt="Logo image"
