@@ -30,20 +30,20 @@ function Navbar() {
   }, [menuOpen]);
 
   return (
-    <div className="bg-gradient-to-b from-[#0a0e27] to-[#0f1535]">
+    <div className="bg-linear-to-b from-[#0a0e27] to-[#0f1535]">
       <nav
         id="home"
-        className="grid grid-cols-2 lg:grid-cols-3 items-center py-4 max-w-[1440px] mx-auto w-11/12"
+        className="grid grid-cols-2 lg:grid-cols-3 items-center py-4 max-w-360 mx-auto w-11/12"
       >
         <div className="flex items-center justify-start">
           <Link href={"/"}>
             <div className="flex items-center gap-3">
               <Image
-                src="/icons/logo.png"
+                src="/logos/logo.png"
                 height={50}
                 width={50}
                 alt="Logo image"
-                className="w-[40px] md:w-[50px] h-auto"
+                className="w-10 md:w-12.5 h-auto"
               />
               <h1 className="text-white text-sm md:text-lg font-bold font-poppins">
                 HelpMeSpeak
@@ -53,7 +53,7 @@ function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center justify-center">
-          <ul className="flex items-center gap-[43px]">
+          <ul className="flex items-center gap-10.75">
             <li>
               <Link
                 href={"/"}
@@ -85,7 +85,7 @@ function Navbar() {
           <div className="hidden lg:flex items-center gap-2">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="py-[9px] px-5 rounded-xl bg-primary cursor-pointer text-white border border-primary hover:bg-primary/90 duration-300"
+              className="py-2.25 px-5 rounded-xl bg-primary cursor-pointer text-white border border-primary hover:bg-primary/90 duration-300"
             >
               Get Download Link
             </button>
@@ -124,10 +124,10 @@ function Navbar() {
           <div className="flex justify-between items-center mb-10 border-b border-gray-300 pb-4">
             <Link href={"/"} onClick={() => setMenuOpen(false)}>
               <Image
-                src={"/icons/logo.png"}
+                src={"/logos/logo.png"}
                 height={50}
                 width={50}
-                className="w-[40px] h-auto"
+                className="w-10 h-auto"
                 alt="HelpMeSpeak logo"
               />
             </Link>

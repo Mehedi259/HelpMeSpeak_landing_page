@@ -26,7 +26,7 @@ function AppDetails() {
   return (
     <div
       id="about"
-      className="max-w-[1440px] mx-auto w-11/12 py-6 md:py-8 lg:py-12"
+      className="max-w-360 mx-auto w-11/12 py-6 md:py-8 lg:py-12"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <motion.div 
@@ -48,7 +48,7 @@ function AppDetails() {
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}
-            className="h-[400px] lg:h-[880px] w-auto relative lg:ml-20 mx-auto lg:mx-0"
+            className="h-100 lg:h-220 w-auto relative lg:ml-20 mx-auto lg:mx-0"
           ></motion.div>
         </motion.div>
         <motion.div 
@@ -167,7 +167,7 @@ function AppDetails() {
                         width={500}
                         height={300}
                         alt="Google play icon"
-                        className="w-[100px] h-8 lg:w-[120px] lg:h-10"
+                        className="w-25 h-8 lg:w-30 lg:h-10"
                       />
                     </motion.a>
                     <motion.a
@@ -181,7 +181,7 @@ function AppDetails() {
                         width={500}
                         height={300}
                         alt="Google play icon"
-                        className="w-[100px] h-8 lg:w-[120px] lg:h-10"
+                        className="w-25 h-8 lg:w-30 lg:h-10"
                       />
                     </motion.a>
                   </div>
